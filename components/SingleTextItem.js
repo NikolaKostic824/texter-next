@@ -26,8 +26,14 @@ const SingleTextItem = ({article}) => {
         <Head>
           <title>Texter - {article.title}</title>
           <meta name="og:title" content={article.title}/>
-          <meta name="og:description" content={article.textSummary}/>
-          <meta name="og:image" content={article.image}/>
+          <meta name="og:description" content={article.title}/>
+          <meta property="og:image" content={article.image}/>
+          <meta property="og:image:secure_url" content={article.image}/>
+          <meta property="og:image:width" content="1200"/>
+          <meta property="og:image:height" content="630"/>
+          <meta property="og:image:alt" content={article.title}/>
+          <meta property="og:image:type" content="image/png"/>
+
         </Head>
         <div>
         <div className="single-text-heading" >
