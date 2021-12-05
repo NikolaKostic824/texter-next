@@ -1,4 +1,4 @@
-import { useState, useLayoutEffect, useEffect } from "react";
+import { useState, useLayoutEffect } from "react";
 import Link from 'next/link'
 import TextCategoriesItem from "../../components/TextCategoriesItem";
 import axios from "axios";
@@ -36,7 +36,7 @@ const Text = ({article}) => {
     const [articles, setArticles] = useState(null);
     useLayoutEffect(() => {
         let mounted = true;
-        axios.get("https://texter-test.herokuapp.com/text//swipe").then((response) => {
+        axios.get("https://texter-test.herokuapp.com/text/swipe").then((response) => {
           const res = response.data;
           setArticles(res)
         });
