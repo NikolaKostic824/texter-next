@@ -1,10 +1,7 @@
-import { useState, useLayoutEffect } from "react";
 import Link from 'next/link'
 import Head from 'next/head';
 
 import TextCategoriesItem from "../../components/TextCategoriesItem";
-import axios from "axios";
-
 //Swiper Imports
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/swiper-bundle.min.css";
@@ -41,9 +38,9 @@ const Text = ({article, articles}) => {
         <>
         <Head>
           <title>Texter - {article.title}</title>
-          <meta property="og:title" content={article.title}/>
-          <meta property="og:description" content={article.title}/>
-          <meta property="og:image" content={article.image}/>
+          <meta property="og:title" content={article.title} />
+          <meta property="og:description" content={article.title} />
+          <meta property="og:image" content={article.image} />
         </Head>
             <div className="single-text-holder">
                 <SingleTextItem article={article} />
