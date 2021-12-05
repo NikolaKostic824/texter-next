@@ -1,4 +1,3 @@
-import Head from 'next/head';
 
 import ReactHtmlParser from "react-html-parser";
 import { useRouter } from "next/router";

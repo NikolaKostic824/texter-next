@@ -1,5 +1,7 @@
 import { useState, useLayoutEffect } from "react";
 import Link from 'next/link'
+import Head from 'next/head';
+
 import TextCategoriesItem from "../../components/TextCategoriesItem";
 import axios from "axios";
 
