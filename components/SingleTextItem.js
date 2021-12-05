@@ -20,7 +20,7 @@ import {
 const SingleTextItem = ({article}) => {
     const router = useRouter();
     //Share URL
-    const shareUrl = "https://textersrb.netlify.app/" + article._id;
+    const shareUrl = "https://texter-next.vercel.app/" + article._id;
     return ( 
         <>
         <Head>
