@@ -29,21 +29,14 @@ export const getStaticProps = async (context) => {
     const id = context.params.id;
     const res = await fetch('https://texter-test.herokuapp.com/text/' + id);
     const data = await res.json();
+    const res2 = await fetch('https://texter-test.herokuapp.com/text/swipe')
+    const data2 = await res2.json()
     return {
-      props: { article: data }
+      props: { article: data, articles:data2 }
     }
 }
 
-const Text = ({article}) => {
-    const [articles, setArticles] = useState(null);
-    useLayoutEffect(() => {
-        let mounted = true;
-        axios.get("https://texter-test.herokuapp.com/text/swipe").then((response) => {
-          const res = response.data;
-          setArticles(res)
-        });
-        return () => (mounted = false);
-    }, []);
+const Text = ({article, articles}) => {
     return ( 
         <>
         <Head>
