@@ -44,6 +44,12 @@ const Text = ({article}) => {
     }, []);
     return ( 
         <>
+        <Head>
+          <title>Texter - {article.title}</title>
+          <meta property="og:title" content={article.title}/>
+          <meta property="og:description" content={article.title}/>
+          <meta property="og:image" content={article.image}/>
+        </Head>
             <div className="single-text-holder">
                 <SingleTextItem article={article} />
             </div>

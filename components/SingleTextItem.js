@@ -23,13 +23,6 @@ const SingleTextItem = ({article}) => {
     const shareUrl = "https://texter-next.vercel.app/tekst/" + article._id;
     return ( 
         <>
-        <Head>
-          <title>Texter - {article.title}</title>
-          <meta property="og:title" content={article.title}/>
-          <meta property="og:description" content={article.title}/>
-          <meta property="og:image" content={article.image}/>
-
-        </Head>
         <div>
         <div className="single-text-heading" >
           <img
