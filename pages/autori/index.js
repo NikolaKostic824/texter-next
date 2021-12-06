@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import WriterCard from '../../components/WriterCard';
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res = await fetch('https://texter-test.herokuapp.com/user');
     const data = await res.json();
     return {

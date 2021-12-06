@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MimModal from "./MimModal";
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
     const res = await fetch('https://texter-test.herokuapp.com/mim');
     const data = await res.json();
     return {

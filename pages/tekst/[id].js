@@ -88,7 +88,7 @@ const Text = ({article, articles}) => {
             </div>
             </div>
         </>
-     );
+    );
 }
  
 export default Text;
